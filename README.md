@@ -7,4 +7,9 @@
 - Basic knowledge of javascript and react
 
 ## Getting Started
-...
+To get up and running, simply run the following commands, first close the repository and run the following commands
+
+- `npm install`
+- `npm run start`
+
+And you are good to go. Enjoy
