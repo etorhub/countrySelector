@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import "./App.css";
 import { CountryConsumer, CountryProvider } from './CountryContext'
-import CountrySelector from './CountrySelector'
+import RouterComponent from './router'
 
 const MyBody = ({ language }) => (
   <CountryConsumer>
@@ -12,16 +12,7 @@ const MyBody = ({ language }) => (
 
 const App = () => (
   <CountryProvider>
-      <CountrySelector />
-      <h1>
-        <MyBody
-          dictionary={{
-            french: "Bonjour, Michel!",
-            english: "Hello, Michael!",
-            italian: "Ciao, Michele!"
-          }}
-        />
-      </h1>
+    <RouterComponent />
   </CountryProvider>
 );
 

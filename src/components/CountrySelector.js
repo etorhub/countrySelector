@@ -1,5 +1,5 @@
 import React from 'react'
-import { CountryConsumer } from './CountryContext'
+import { CountryConsumer } from '../CountryContext'
 import ReactCountryFlag from 'react-country-flag';
 
 const countryButtonStyle = { 
