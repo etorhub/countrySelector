@@ -1,0 +1,14 @@
+.app-header {
+    
+}
+
+.app-aside {
+    float: left;
+    width: 300px;
+    background: lightgray;
+    padding: 20px;
+}
+
+.app-body {
+    margin: 20px
+}

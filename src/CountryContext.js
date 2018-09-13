@@ -14,7 +14,9 @@ class CountryProvider extends React.Component {
 	]
   };
 
-  updateCountry = c => this.setState({ country: c });
+  updateCountry = c => {
+    this.setState({ country: c });
+  } 
 
   render() {
     return (
