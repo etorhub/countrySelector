@@ -1,30 +1,33 @@
 import React from "react";
 
 const CountryContext = React.createContext();
-const CountryConsumer = CountryContext.Consumer;
 
 class CountryProvider extends React.Component {
   state = {
-	country: 'es',
-	countries: [
-		{ id: 'es', label: 'Spain' },
-		{ id: 'pt', label: 'Portugal' },
-		{ id: 'it', label: 'Italy' },
-		{ id: 'us', label: 'United States' }
-	]
+    country: null,
+    countries: [
+      { id: 'es', label: 'Spain' },
+      { id: 'pt', label: 'Portugal' },
+      { id: 'it', label: 'Italy' },
+      { id: 'us', label: 'United States' }
+    ]
   };
-
+  
   updateCountry = c => {
     this.setState({ country: c });
-  } 
-
+  }
+  resetCountry = c => {
+    this.setState({ country: null });
+  }
+  
   render() {
     return (
       <CountryContext.Provider
         value={{
 		      countries: this.state.countries,
 		      country: this.state.country,
-          updateCountry: this.updateCountry
+          updateCountry: this.updateCountry,
+          resetCountry: this.resetCountry
         }}
       >
         {this.props.children}
@@ -32,5 +35,7 @@ class CountryProvider extends React.Component {
     );
   }
 }
+
+const CountryConsumer = CountryContext.Consumer;
 
 export { CountryProvider, CountryConsumer };
